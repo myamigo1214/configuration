@@ -52,3 +52,6 @@
     - role: datadog-uninstall
       when: not COMMON_ENABLE_DATADOG
     - flower
+    - role: mfe
+      MFE_NAME: logistration
+      when: LOGISTRATION_ENABLED

@@ -44,6 +44,9 @@
       when: PROGRAM_CONSOLE_ENABLED
     - role: prospectus
       when: PROSPECTUS_ENABLED
+    - role: mfe
+      MFE_NAME: logistration
+      when: LOGISTRATION_ENABLED
     - oauth_client_setup
     - role: datadog
       when: COMMON_ENABLE_DATADOG
@@ -52,6 +55,3 @@
     - role: datadog-uninstall
       when: not COMMON_ENABLE_DATADOG
     - flower
-    - role: mfe
-      MFE_NAME: logistration
-      when: LOGISTRATION_ENABLED

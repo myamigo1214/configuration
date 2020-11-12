@@ -118,3 +118,10 @@
   tags:
     - install:base
     - install:vhosts
+
+# If tasks that notify reload nginx don't change the state of the remote system
+# their corresponding notifications don't get run.
+- name: make sure nginx has started
+  service:
+    name: nginx
+    state: reloaded
